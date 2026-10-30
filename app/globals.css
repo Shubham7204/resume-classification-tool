@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+
+  /* Warm paper palette (after photsy.app) */
+  --color-bg: #f8f7f4;
+  --color-elev: #ffffff;
+  --color-sunken: #efede8;
+  --color-sidebar: #f1efeb;
+  --color-fg: #12131a;
+  --color-muted: #646879;
+  --color-faint: #8a8d99;
+  --color-line: #12131a14;
+  --color-line-strong: #12131a24;
+  --color-brand: #f2785c;
+  --color-brand-ink: #c8492c;
+  --color-brand-soft: #f2785c1f;
+
+  /* Decision colours */
+  --color-good: #1f8a5b;
+  --color-good-soft: #1f8a5b17;
+  --color-warn: #b7791f;
+  --color-warn-soft: #f6b34c26;
+  --color-bad: #d14343;
+  --color-bad-soft: #e5484d17;
+  --color-info: #4f7fea;
+  --color-info-soft: #4f7fea17;
+
+  --shadow-card: 0 1px 2px #12131a0a, 0 12px 40px -12px #12131a2e;
+  --shadow-window: 0 2px 4px #12131a0a, 0 40px 120px -30px #1e224261;
+
+  --animate-rise: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--rise-y, 16px));
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+::selection {
+  background: var(--color-brand-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

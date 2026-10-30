@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# Next.js build output and caches
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment variables and secrets (set these in Vercel instead; see .env.example)
+.env
+.env*
+!.env.example
+*.pem
+
+# Deployment / platform state
+.vercel/
+.neon
+
+# Tests
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Demo video renders (brag-output/brag.mp4, frames, stills)
+brag-output/
+brag-output-*/
+
+# Demo sample files (resumes, JDs, college sheet). The live app reads from Postgres and
+# object storage, not from here; these are only needed to re-seed the demo or run e2e tests.
+samples/
+
+# Sample-generation leftovers (LaTeX and Python)
+__pycache__/
+*.pyc
+*.aux
+*.out
+*.synctex.gz
+samples/latex/**/*.log
+
+# Local AI and design tooling
+.agent/
+.agents/
+.impeccable/
+.claude/settings.local.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# v0 sandbox internal files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
